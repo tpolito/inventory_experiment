@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "sword",
+      "friendlyName": "Sword",
+      "atlasCords": {
+        "x": 80,
+        "y": 576
+      }
+    }
+  ]
+}
