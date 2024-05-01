@@ -3,9 +3,18 @@
     {
       "id": 1,
       "name": "sword",
-      "friendlyName": "Sword",
-      "atlasCords": {
+      "friendly_name": "Sword",
+      "atlas_cords": {
         "x": 80,
+        "y": 576
+      }
+    },
+    {
+      "id": 2,
+      "name": "club",
+      "friendly_name": "Club",
+      "atlas_cords": {
+        "x": 96,
         "y": 576
       }
     }

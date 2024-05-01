@@ -1,15 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c71kh1y1e4vek"]
+[gd_scene load_steps=2 format=3 uid="uid://c71kh1y1e4vek"]
 
 [ext_resource type="Script" path="res://ui/Inventory.gd" id="1_bc464"]
-[ext_resource type="Texture2D" uid="uid://ckb2uw836gkid" path="res://assets/InventorySlot.png" id="1_ik7ph"]
-[ext_resource type="Texture2D" uid="uid://bnt0uj1qrwp7a" path="res://assets/spritesheet.png" id="2_wp6bp"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ywea"]
-texture = ExtResource("1_ik7ph")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1e4u1"]
-atlas = ExtResource("2_wp6bp")
-region = Rect2(80, 576, 16, 16)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -38,6 +29,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bc464")
+inventory_size = 20
 
 [node name="Bag" type="GridContainer" parent="UI/Inventory"]
 custom_minimum_size = Vector2(20, 20)
@@ -56,111 +48,3 @@ grow_vertical = 2
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 2
 columns = 5
-
-[node name="Panel" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="TextureRect" type="TextureRect" parent="UI/Inventory/Bag/Panel"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 18.0
-offset_bottom = 18.0
-texture = SubResource("AtlasTexture_1e4u1")
-
-[node name="Panel2" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel3" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel4" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel5" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel6" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel7" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel8" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel9" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel10" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel11" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel12" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel13" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel14" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel15" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel16" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel17" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel18" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel19" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
-
-[node name="Panel20" type="Panel" parent="UI/Inventory/Bag"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")

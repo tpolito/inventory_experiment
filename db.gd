@@ -1,10 +1,18 @@
 extends Node
+class_name db
 
 var items: Array[Item]
 
 func _ready() -> void:
   var json = load_json_file("res://db.json")
-  items = json["items"]
+  for i in json["items"]:
+    var tmp = Item.new()
+    tmp.id = i["id"]
+    tmp.name = i["name"]
+    tmp.friendly_name = i["friendly_name"]
+    tmp.atlas_cords.x = i["atlas_cords"]["x"]
+    tmp.atlas_cords.y = i["atlas_cords"]["y"]
+    items.append(tmp)
 
 func load_json_file(file_path: String):
   if FileAccess.file_exists(file_path):

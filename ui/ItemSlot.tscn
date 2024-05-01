@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4ilushbfatrj"]
+
+[ext_resource type="Texture2D" uid="uid://ckb2uw836gkid" path="res://assets/InventorySlot.png" id="1_hklir"]
+[ext_resource type="Script" path="res://ui/ItemSlot.gd" id="2_wbqx4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ywea"]
+texture = ExtResource("1_hklir")
+
+[node name="ItemSlot" type="Panel"]
+custom_minimum_size = Vector2(20, 20)
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ywea")
+script = ExtResource("2_wbqx4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 18.0
+offset_bottom = 18.0
