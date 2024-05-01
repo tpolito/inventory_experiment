@@ -2,13 +2,14 @@ extends Control
 class_name inventory
 
 const ITEM_SLOT = preload ("res://ui/ItemSlot.tscn")
+const HOVERED_ITEM = preload ("res://HoveredItem.tscn")
 
 @export var inventory_size := 10
 
 @onready var bag = $Bag as GridContainer
 
-var inventory = []
 var bag_inventory = []
+var selected_item: Item = null
 
 func _ready() -> void:
   for i in range(inventory_size):
@@ -57,4 +58,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
       swap_items(0, 3)
 
 func on_item_clicked(item: Item) -> void:
-  print("Item clicked: %s" % item.friendly_name)
+  print("Selected item %s" % item.friendly_name)
+  selected_item = item
+  var test = HOVERED_ITEM.instantiate()
+  test.set_hover_texture(item.atlas_cords)
+  add_child(test)
+  mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
