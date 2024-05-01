@@ -4,6 +4,8 @@ class_name item_slot
 const sprite_sheet_texture: Texture = preload ("res://assets/spritesheet.png")
 @onready var item_texture: TextureRect = $TextureRect as TextureRect
 
+signal item_clicked(item: Item)
+
 var item: Item = null
 var mouse_inside: bool = false
 
@@ -33,3 +35,9 @@ func on_mouse_entered() -> void:
 func on_mouse_exited() -> void:
   self_modulate = Color.WHITE
   mouse_default_cursor_shape = Control.CURSOR_ARROW
+
+func _gui_input(event: InputEvent) -> void:
+  if event is InputEventMouseButton:
+    if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+      if item != null:
+        SignalBus.item_clicked.emit(item)

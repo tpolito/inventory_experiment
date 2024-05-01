@@ -17,6 +17,24 @@
         "x": 96,
         "y": 576
       }
+    },
+    {
+      "id": 3,
+      "name": "axe",
+      "friendly_name": "Axe",
+      "atlas_cords": {
+        "x": 112,
+        "y": 576
+      }
+    },
+    {
+      "id": 4,
+      "name": "torch",
+      "friendly_name": "Torch",
+      "atlas_cords": {
+        "x": 208,
+        "y": 576
+      }
     }
   ]
 }
