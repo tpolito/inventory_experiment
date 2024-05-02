@@ -7,6 +7,7 @@ const sprite_sheet_texture: Texture = preload ("res://assets/spritesheet.png")
 signal item_clicked(item: Item)
 
 var item: Item = null
+var inventory_index: int
 var mouse_inside: bool = false
 
 func _ready() -> void:
@@ -24,13 +25,16 @@ func set_item_texture(atlas_cords: Vector2) -> void:
   item_texture.texture = atlas_texture
 
 func set_item(item_data: Item) -> void:
-  self.item = item_data
-  set_item_texture(item.atlas_cords)
+  item = item_data
+  if item != null:
+    set_item_texture(item.atlas_cords)
+  else:
+    item_texture.texture = null
 
 func on_mouse_entered() -> void:
   if item != null:
     self_modulate = Color.RED
-    mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+  mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 
 func on_mouse_exited() -> void:
   self_modulate = Color.WHITE
@@ -40,4 +44,6 @@ func _gui_input(event: InputEvent) -> void:
   if event is InputEventMouseButton:
     if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
       if item != null:
-        SignalBus.item_clicked.emit(item)
+        SignalBus.item_clicked.emit(item, inventory_index)
+      else:
+        SignalBus.slot_clicked.emit(inventory_index)
